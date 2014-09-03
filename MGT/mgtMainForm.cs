@@ -53,8 +53,8 @@ namespace MGT
 
         void hook_KeyPressed(object sender, KeyPressedEventArgs e)
         {
-            // show the keys pressed in a label.
-            //label1.Text = e.Modifier.ToString() + " + " + e.Key.ToString();
+            //show the keys pressed in a label.
+           //MessageBox.Show(e.Modifier.ToString() + " + " + e.Key.ToString());
             runAll4();
         }
 
@@ -500,7 +500,7 @@ namespace MGT
             if (Clipboard.ContainsText())
             {
 
-                s += Clipboard.GetText();
+                s = Clipboard.GetText();
 
                 Regex lines = new Regex(".+$", RegexOptions.Multiline);
                 MatchCollection linesMatches = lines.Matches(s);
